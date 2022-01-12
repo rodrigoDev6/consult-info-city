@@ -31,24 +31,25 @@ function enter(event) {
   }
 }
 
-//resultados da pesquisa
-function searchResults(city) {
-  fetch(
-    `${api.base}weather?q=${city}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`
-  )
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(response.status);
-      }
-      return response.json();
-    })
-    .catch(error => {
-      alert(`${error} - Nome não encontrado `);
-    })
-
-    .then(response => {
-      displayResults(response);
-    });
+// exceções searchResults
+async function searchResults(city) {
+  try {
+    if (!city) {
+      alert('Nome invalido');
+      throw new Error('Nome da cidade inválido!');
+    }
+    
+    const result = await fetch(`${api.base}weather?q=${city}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`);
+    const data = await result.json();
+    
+    console.log(data);
+    if (data?.message) {
+      alert('Nome da cidade inválido');
+    }
+    displayResults(data);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 //function inserir os dados no card
