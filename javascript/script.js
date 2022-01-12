@@ -38,14 +38,14 @@ function searchResults(city) {
   )
     .then(response => {
       if (!response.ok) {
-        throw new Error(`http error: status ${response.status}`); //mensagem de erro alternativa para o resonse
+        throw new Error(response.status);
       }
       return response.json();
     })
     .catch(error => {
-      //alert para ser ativado quando houver o erro
-      alert(error.message);
+      alert(`${error} - Nome não encontrado `);
     })
+
     .then(response => {
       displayResults(response);
     });
