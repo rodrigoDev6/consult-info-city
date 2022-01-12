@@ -9,7 +9,7 @@ const api = {
 //Selecionando os valores do html
 const city = document.querySelector('.city');
 const date = document.querySelector('.date');
-
+const container_img = document.querySelector('.container-img')
 const container_temp = document.querySelector('.container-temp');
 const temp_number = document.querySelector('.container-temp div');
 const temp_unit = document.querySelector('.container-temp span');
