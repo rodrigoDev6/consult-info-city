@@ -67,9 +67,9 @@ function displayResults(weather) {
   temp_unit.innerHTML = `°c`;
 
   weather_tempo = weather.weather[0].description;
-  weather_t.innerText = capitalizeFirstLetter(weather_tempo);
+  weather_t.innerHTML = capitalizeFirstLetter(weather_tempo);
 
-  low_high.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(
+  low_high.innerHTML = `${Math.round(weather.main.temp_min)}°c / ${Math.round(
     weather.main.temp_max
   )}°c`;
 }
