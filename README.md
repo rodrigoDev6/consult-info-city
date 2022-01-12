@@ -1,17 +1,19 @@
 <h1 style="text-align: center; font-size: 2em;">Consulte Climas </h1>
 
+<!-- ESPECIFICAÇÕES -->
 <p>
   Esta Single Page Aplication foi criada para realizar consulta de informações climáticas utiliando a API Weather. 
   
   O estilo da aplicação foi utilizando o famework Bootstrap e algumas modificações internas no arquivo gloabl.css dentro da pasta css.
-
-Acesse a SPA: <a href="consult-info-city.vercel.app"><b>Consulte Clima</b></a>
-
+  
+  A linguagem utilizada no projeto foi JavaScript Puro.
 </p>
+
+Acesse a SPA online: <a href="https://consult-info-city.vercel.app"><b>Consulte Clima</b></a>
 
 <h2 style="text-align: left; font-size: 2em;">Veja dicas de como usar a aplicação</h2>
 
-<!-- Gifs de dicas -->
+<!-- GIFS DE DICAS -->
 <div style="text-align:left;">
 
   <p style="font-size: 1.4em; margin:2rem auto"> Consultando Clima de Uma Cidade:</p>
