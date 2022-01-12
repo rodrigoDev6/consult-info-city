@@ -9,7 +9,7 @@ const api = {
 //Selecionando os valores do html
 const city = document.querySelector('.city');
 const date = document.querySelector('.date');
-const container_img = document.querySelector('.container-img')
+const container_img = document.querySelector('.container-img');
 const container_temp = document.querySelector('.container-temp');
 const temp_number = document.querySelector('.container-temp div');
 const temp_unit = document.querySelector('.container-temp span');
@@ -67,11 +67,16 @@ function displayResults(weather) {
   temp_unit.innerHTML = `°c`;
 
   weather_tempo = weather.weather[0].description;
-  weather_t.innerHTML = capitalizeFirstLetter(weather_tempo);
+  weather_t.innerText = capitalizeFirstLetter(weather_tempo);
 
-  low_high.innerHTML = `${Math.round(weather.main.temp_min)}°c / ${Math.round(
+  low_high.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(
     weather.main.temp_max
   )}°c`;
+}
+
+//convertendo em string low_high
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 // Criando function para definir o Dia da semana e o mês
